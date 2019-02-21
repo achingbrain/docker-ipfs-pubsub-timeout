@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+
+  sender:
+    build:
+      context: sender
+    environment:
+      - DEBUG=libp2p:floodsub
+
+  receiver:
+    build:
+      context: receiver
+    environment:
+      - DEBUG=libp2p:floodsub
